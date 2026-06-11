@@ -486,6 +486,27 @@ section { padding: 100px 60px; }
   box-shadow: 0 20px 56px rgba(0,0,0,0.4), 0 0 40px rgba(212,160,23,0.2);
   z-index: 1;
 }
+.featured-plan .plan-bg {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+.featured-plan .plan-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+}
+.featured-plan .plan-content {
+  position: relative !important;
+  z-index: 2 !important;
+}
+.featured-plan .plan-badge {
+  position: absolute !important;
+  z-index: 3 !important;
+}
+.featured-plan::after { display: none !important; }
 .plan-icon {
   font-size: 28px; margin-bottom: 10px;
   color: var(--gold);
