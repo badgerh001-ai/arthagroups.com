@@ -857,6 +857,191 @@
     .process-cards-grid { grid-template-columns: 1fr; }
     .process-card { min-height: 280px; }
   }
+
+  /* ── GOLD ICON ── */
+  .gold-icon { color: var(--gold); display: inline-flex; align-items: center; }
+  .service-icon.gold-icon { margin-bottom: 12px; }
+
+  /* ── PLANS SECTION ── */
+  #plans { background: var(--navy); }
+  .plans-inner { max-width: 1200px; margin: 0 auto; }
+  .plans-header { text-align: center; margin-bottom: 56px; }
+  .plans-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 20px; margin-bottom: 48px;
+  }
+  .plan-card {
+    position: relative; overflow: hidden;
+    min-height: 480px; display: flex; align-items: flex-end;
+    border: 1px solid rgba(212,160,23,0.2);
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    cursor: default;
+  }
+  .plan-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold);
+    box-shadow: 0 20px 56px rgba(0,0,0,0.5), 0 0 30px rgba(212,160,23,0.15);
+  }
+  .featured-plan {
+    border-color: rgba(212,160,23,0.5);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 56px rgba(0,0,0,0.4), 0 0 40px rgba(212,160,23,0.2);
+  }
+  .featured-plan:hover { transform: translateY(-14px); }
+  .plan-bg {
+    position: absolute; inset: 0;
+    background-size: cover; background-position: center;
+    transition: transform 0.6s ease; z-index: 0;
+  }
+  .plan-card:hover .plan-bg { transform: scale(1.05); }
+  .plan-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(10,22,40,0.3) 0%, rgba(10,22,40,0.7) 40%, rgba(10,22,40,0.97) 100%);
+    z-index: 1;
+  }
+  .plan-badge {
+    position: absolute; top: 20px; right: 20px;
+    background: var(--gold); color: var(--navy);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+    padding: 5px 12px; z-index: 3; font-weight: 700;
+  }
+  .plan-content {
+    position: relative; z-index: 2; padding: 28px;
+    width: 100%;
+  }
+  .plan-icon { margin-bottom: 8px; }
+  .plan-num {
+    font-family: 'Cinzel', serif; font-size: 44px; font-weight: 700;
+    color: rgba(212,160,23,0.2); line-height: 1; margin-bottom: 6px; display: block;
+  }
+  .plan-name {
+    font-family: 'Cinzel', serif; font-size: 20px; font-weight: 600;
+    color: var(--white); margin-bottom: 6px;
+  }
+  .plan-tagline {
+    font-size: 14px; font-style: italic; color: var(--gold-light);
+    margin-bottom: 16px; display: block;
+  }
+  .plan-features {
+    list-style: none; margin-bottom: 20px;
+  }
+  .plan-features li {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 300;
+    color: rgba(250,246,238,0.8); padding: 5px 0;
+    border-bottom: 1px solid rgba(212,160,23,0.08);
+  }
+  .plan-check { flex-shrink: 0; }
+  .plan-cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--gold); text-decoration: none;
+    border-bottom: 1px solid rgba(212,160,23,0.4);
+    padding-bottom: 2px;
+    transition: color 0.3s, border-color 0.3s;
+  }
+  .plan-cta:hover { color: var(--gold-light); border-color: var(--gold-light); }
+
+  /* ── VALUES STRIP ── */
+  .values-strip {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1px; border: 1px solid rgba(212,160,23,0.15);
+  }
+  .value-item {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 10px; padding: 28px 20px;
+    background: var(--navy-mid);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--white-dim); text-align: center;
+  }
+
+  /* ── FOOTER NEW ── */
+  footer { background: #060E1A; padding: 0; border-top: 1px solid rgba(212,160,23,0.2); }
+  .footer-top {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 48px; padding: 64px 60px 48px;
+  }
+  .footer-brand img {
+    height: 64px; width: 64px;
+    border-radius: 50%; object-fit: cover; object-position: center 15%;
+    border: 2px solid rgba(212,160,23,0.5);
+    margin-bottom: 12px;
+  }
+  .footer-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px; font-style: italic;
+    color: var(--white-dim); margin-bottom: 20px;
+  }
+  .footer-social { display: flex; gap: 12px; }
+  .social-btn {
+    width: 38px; height: 38px;
+    border: 1px solid rgba(212,160,23,0.3);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold); text-decoration: none;
+    transition: background 0.3s, border-color 0.3s;
+  }
+  .social-btn:hover { background: rgba(212,160,23,0.1); border-color: var(--gold); }
+  .footer-col-title {
+    font-family: 'Cinzel', serif; font-size: 12px;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: var(--gold-light); margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(212,160,23,0.2);
+  }
+  .footer-links-col ul { list-style: none; }
+  .footer-links-col ul li { margin-bottom: 10px; }
+  .footer-links-col ul li a {
+    display: flex; align-items: center; gap: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px; letter-spacing: 0.5px;
+    color: rgba(250,246,238,0.5); text-decoration: none;
+    transition: color 0.3s;
+  }
+  .footer-links-col ul li a:hover { color: var(--gold); }
+  .link-arrow { opacity: 0.5; transition: opacity 0.3s; }
+  .footer-links-col ul li a:hover .link-arrow { opacity: 1; }
+  .footer-contact-list li {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px; color: rgba(250,246,238,0.5);
+  }
+  .footer-contact-list a {
+    color: rgba(250,246,238,0.5); text-decoration: none;
+    transition: color 0.3s;
+  }
+  .footer-contact-list a:hover { color: var(--gold); }
+  .footer-bottom {
+    border-top: 1px solid rgba(212,160,23,0.1);
+    padding: 20px 60px;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px; letter-spacing: 1px;
+    color: rgba(250,246,238,0.3);
+  }
+  .footer-bottom a { color: var(--gold); text-decoration: none; }
+
+  /* ── C-LINK ── */
+  .c-link { text-decoration: none; transition: color 0.3s; }
+  .c-link:hover { color: var(--gold-light) !important; }
+
+  /* ── RESPONSIVE PLANS + FOOTER ── */
+  @media (max-width: 960px) {
+    .plans-grid { grid-template-columns: 1fr; }
+    .featured-plan { transform: none; }
+    .values-strip { grid-template-columns: repeat(2, 1fr); }
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; padding: 40px 28px 32px; }
+    .footer-bottom { padding: 16px 28px; flex-direction: column; text-align: center; }
+  }
+  @media (max-width: 600px) {
+    .footer-top { grid-template-columns: 1fr; }
+    .values-strip { grid-template-columns: 1fr 1fr; }
+    .services-grid .sc-furniture { grid-column: span 1 !important; }
+  }
 </style>
 </head>
 <body>
@@ -870,6 +1055,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#plans">Plans</a></li>
     <li><a href="#process">Process</a></li>
     <li><a href="#testimonials">Testimonials</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -883,6 +1069,7 @@
   <a href="#about" onclick="closeMobileMenu()">About</a>
   <a href="#services" onclick="closeMobileMenu()">Services</a>
   <a href="#portfolio" onclick="closeMobileMenu()">Portfolio</a>
+  <a href="#plans" onclick="closeMobileMenu()">Plans</a>
   <a href="#process" onclick="closeMobileMenu()">Process</a>
   <a href="#testimonials" onclick="closeMobileMenu()">Testimonials</a>
   <a href="#contact" onclick="closeMobileMenu()">Contact</a>
@@ -945,7 +1132,7 @@
       <div class="about-img-wrap">
         <div class="about-img" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80'); background-size: cover; background-position: center; color: transparent;"></div>
         <div class="about-accent"></div>
-        <div class="about-tag">Since<br/>2024</div>
+        <div class="about-tag">Since<br/>2012</div>
       </div>
     </div>
     <div class="about-text">
@@ -986,10 +1173,9 @@
   <div class="services-header">
     <span class="section-eyebrow">What We Offer</span>
     <div class="gold-rule"></div>
-    <h2 class="section-title">Spaces Crafted<br/>With Intention</h2>
+    <h2 class="section-title">Thoughtful Design.<br/>Timeless Spaces.</h2>
     <p class="section-body">
-      From concept to completion, every service we offer is designed 
-      to make your vision a reality — with precision and artistry.
+      From concept to completion — we transform every space into a work of art that reflects your vision and elevates your life.
     </p>
   </div>
   <div class="services-grid">
@@ -997,73 +1183,142 @@
       <div class="sc-bg" style="background-image:url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80')"></div>
       <div class="sc-overlay"></div>
       <div class="sc-content">
-      <span class="service-num">01</span>
-      <span class="service-icon">🏠</span>
-      <div class="service-name">Residential Interiors</div>
-      <p class="service-desc">Homes that reflect your personality — from minimalist sanctuaries to opulent living spaces tailored to your lifestyle.</p>
-      <div class="service-line">
+        <span class="service-num">01</span>
+        <span class="service-icon gold-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg></span>
+        <div class="service-name">Residential Interiors</div>
+        <p class="service-desc">Homes that reflect your personality — from minimalist sanctuaries to opulent living spaces tailored to your lifestyle.</p>
+        <div class="service-line"></div>
       </div>
-    </div>
     </div>
     <div class="service-card sc-commercial">
       <div class="sc-bg" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80')"></div>
       <div class="sc-overlay"></div>
       <div class="sc-content">
-      <span class="service-num">02</span>
-      <span class="service-icon">🏢</span>
-      <div class="service-name">Commercial Spaces</div>
-      <p class="service-desc">Offices, showrooms, and retail environments that communicate your brand identity with elegance and purpose.</p>
-      <div class="service-line">
+        <span class="service-num">02</span>
+        <span class="service-icon gold-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="1"/><path d="M8 3v18M16 3v18M2 9h20M2 15h20"/></svg></span>
+        <div class="service-name">Commercial Interiors</div>
+        <p class="service-desc">Offices, showrooms, and retail environments that communicate your brand identity with elegance and purpose.</p>
+        <div class="service-line"></div>
       </div>
-    </div>
     </div>
     <div class="service-card sc-hospitality">
-      <div class="sc-bg" style="background-image:url('https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=800&q=80')"></div>
+      <div class="sc-bg" style="background-image:url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80')"></div>
       <div class="sc-overlay"></div>
       <div class="sc-content">
-      <span class="service-num">03</span>
-      <span class="service-icon">🏨</span>
-      <div class="service-name">Hospitality Design</div>
-      <p class="service-desc">Hotels, restaurants, and lounges where every detail contributes to an unforgettable guest experience.</p>
-      <div class="service-line">
+        <span class="service-num">03</span>
+        <span class="service-icon gold-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="1"/><path d="M2 9h20M6 4v5M12 4v5M18 4v5M6 14h.01M10 14h.01M14 14h.01M18 14h.01M6 18h.01M10 18h.01M14 18h.01M18 18h.01"/></svg></span>
+        <div class="service-name">Modular Kitchens</div>
+        <p class="service-desc">Precision-crafted modular kitchens blending functionality with beauty — designed for the way you cook and live.</p>
+        <div class="service-line"></div>
       </div>
-    </div>
     </div>
     <div class="service-card sc-planning">
       <div class="sc-bg" style="background-image:url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&q=80')"></div>
       <div class="sc-overlay"></div>
       <div class="sc-content">
-      <span class="service-num">04</span>
-      <span class="service-icon">✏️</span>
-      <div class="service-name">Space Planning</div>
-      <p class="service-desc">Intelligent layouts that maximize flow, function, and beauty — making every square foot work harder and feel better.</p>
-      <div class="service-line">
+        <span class="service-num">04</span>
+        <span class="service-icon gold-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="1"/><line x1="12" y1="2" x2="12" y2="22"/><circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/></svg></span>
+        <div class="service-name">Wardrobes & Storage</div>
+        <p class="service-desc">Bespoke wardrobe and storage solutions — maximising space while adding elegance to every room.</p>
+        <div class="service-line"></div>
       </div>
     </div>
-    </div>
-    <div class="service-card sc-furniture">
-      <div class="sc-bg" style="background-image:url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80')"></div>
+    <div class="service-card sc-furniture" style="grid-column: span 2;">
+      <div class="sc-bg" style="background-image:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80')"></div>
       <div class="sc-overlay"></div>
       <div class="sc-content">
-      <span class="service-num">05</span>
-      <span class="service-icon">🛋️</span>
-      <div class="service-name">Furniture & Décor</div>
-      <p class="service-desc">Custom furniture design and curated décor selection — sourced globally, placed with purpose in every room.</p>
-      <div class="service-line">
+        <span class="service-num">05</span>
+        <span class="service-icon gold-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/><path d="M8 10h8M8 14h5"/></svg></span>
+        <div class="service-name">Design Consultation</div>
+        <p class="service-desc">Expert design consultation to guide your vision — we listen, advise, and craft a clear roadmap tailored to your space, budget, and aspirations.</p>
+        <div class="service-line"></div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- PLANS -->
+<section id="plans">
+  <div class="plans-inner">
+    <div class="plans-header">
+      <span class="section-eyebrow">Our Packages</span>
+      <div class="gold-rule" style="margin:0 auto 20px;"></div>
+      <h2 class="section-title">Designs for Every Dream.<br/>Solutions for Every Budget.</h2>
+      <p class="section-body" style="margin:0 auto;text-align:center;max-width:520px;">
+        Whether you're starting fresh or going all-out luxury — we have the perfect package for your vision.
+      </p>
     </div>
-    <div class="service-card sc-lighting">
-      <div class="sc-bg" style="background-image:url('https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&q=80')"></div>
-      <div class="sc-overlay"></div>
-      <div class="sc-content">
-      <span class="service-num">06</span>
-      <span class="service-icon">💡</span>
-      <div class="service-name">Lighting Design</div>
-      <p class="service-desc">Light sculpts space. Our lighting design creates mood, highlights architecture, and transforms ambiance after dark.</p>
-      <div class="service-line">
+    <div class="plans-grid">
+      <div class="plan-card plan-budget">
+        <div class="plan-bg" style="background-image:url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80')"></div>
+        <div class="plan-overlay"></div>
+        <div class="plan-content">
+          <div class="plan-icon gold-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 100 7h5a3.5 3.5 0 110 7H6"/></svg></div>
+          <div class="plan-num">01</div>
+          <div class="plan-name">Budget Oriental</div>
+          <p class="plan-tagline">Smart designs. Beautiful spaces.</p>
+          <ul class="plan-features">
+            <li><span class="gold-icon plan-check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Space planning & layout</li>
+            <li><span class="gold-icon plan-check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Standard material selection</li>
+            <li><span class="gold-icon plan-check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>2D floor plan & elevation</li>
+            <li><span class="gold-icon plan-check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Project supervision</li>
+          </ul>
+          <a href="#contact" class="plan-cta">Get Started <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></a>
+        </div>
+      </div>
+      <div class="plan-card plan-premium featured-plan">
+        <div class="plan-bg" style="background-image:url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80')"></div>
+        <div class="plan-overlay"></div>
+        <div class="plan-badge">Most Popular</div>
+        <div class="plan-content">
+          <div class="plan-icon gold-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <div class="plan-num">02</div>
+          <div class="plan-name">Premium</div>
+          <p class="plan-tagline">Better materials. Superior comfort.</p>
+          <ul class="plan-features">
+            <li><span class="gold-icon plan-check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Everything in Budget Oriental</li>
+            <li><span class="gold-icon plan-check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Premium material sourcing</li>
+            <li><span class="gold-icon plan-check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>3D visualization renders</li>
+            <li><span class="gold-icon plan-check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Dedicated project manager</li>
+          </ul>
+          <a href="#contact" class="plan-cta">Get Started <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></a>
+        </div>
+      </div>
+      <div class="plan-card plan-luxury">
+        <div class="plan-bg" style="background-image:url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&q=80')"></div>
+        <div class="plan-overlay"></div>
+        <div class="plan-content">
+          <div class="plan-icon gold-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"/><path d="M5 20h14"/></svg></div>
+          <div class="plan-num">03</div>
+          <div class="plan-name">Luxury</div>
+          <p class="plan-tagline">Timeless luxury. Unmatched elegance.</p>
+          <ul class="plan-features">
+            <li><span class="gold-icon plan-check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Everything in Premium</li>
+            <li><span class="gold-icon plan-check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Luxury imported materials</li>
+            <li><span class="gold-icon plan-check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Full bespoke furniture design</li>
+            <li><span class="gold-icon plan-check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>White-glove end-to-end delivery</li>
+          </ul>
+          <a href="#contact" class="plan-cta">Get Started <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></a>
+        </div>
       </div>
     </div>
+    <div class="values-strip">
+      <div class="value-item">
+        <span class="gold-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M12 2v6l3 2"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.11"/></svg></span>
+        <span>Quality You Can Trust</span>
+      </div>
+      <div class="value-item">
+        <span class="gold-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></span>
+        <span>Client-Centric Approach</span>
+      </div>
+      <div class="value-item">
+        <span class="gold-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></span>
+        <span>Creative Excellence</span>
+      </div>
+      <div class="value-item">
+        <span class="gold-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+        <span>On-Time Delivery</span>
+      </div>
     </div>
   </div>
 </section>
@@ -1237,24 +1492,38 @@
       <h2 class="section-title">Let's Create<br/>Something Beautiful</h2>
       <p>Every exceptional space begins with a single conversation. Tell us about your project and let's start imagining what's possible together.</p>
       <div class="contact-detail">
-        <div class="c-icon">📍</div>
+        <div class="c-icon gold-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
         <div>
           <span class="c-label">Studio</span>
           <span class="c-val">Bangalore, Karnataka</span>
         </div>
       </div>
       <div class="contact-detail">
-        <div class="c-icon">📞</div>
+        <div class="c-icon gold-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.12 2.19 2 2 0 012.11 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
         <div>
           <span class="c-label">Phone</span>
-          <span class="c-val">+91 XXXXX XXXXX</span>
+          <a href="tel:+919845840824" class="c-val c-link">+91 98458 40824</a>
         </div>
       </div>
       <div class="contact-detail">
-        <div class="c-icon">✉️</div>
+        <div class="c-icon gold-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
         <div>
           <span class="c-label">Email</span>
-          <span class="c-val">hello@arthainteriors.com</span>
+          <a href="mailto:contact@arthagroups.com" class="c-val c-link">contact@arthagroups.com</a>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="c-icon gold-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></div>
+        <div>
+          <span class="c-label">Instagram</span>
+          <a href="https://www.instagram.com/interiors_by_artha?igsh=MW16ZW95eG81Nm43OA==" target="_blank" class="c-val c-link">@interiors_by_artha</a>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="c-icon gold-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></div>
+        <div>
+          <span class="c-label">WhatsApp</span>
+          <a href="https://wa.me/919845840824" target="_blank" class="c-val c-link">Chat With Us</a>
         </div>
       </div>
     </div>
@@ -1278,11 +1547,10 @@
         <select>
           <option value="">Select a service</option>
           <option>Residential Interiors</option>
-          <option>Commercial Spaces</option>
-          <option>Hospitality Design</option>
-          <option>Space Planning</option>
-          <option>Furniture &amp; Décor</option>
-          <option>Lighting Design</option>
+          <option>Commercial Interiors</option>
+          <option>Modular Kitchens</option>
+          <option>Wardrobes &amp; Storage</option>
+          <option>Design Consultation</option>
         </select>
       </div>
       <div class="form-field">
@@ -1298,24 +1566,54 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-logo">
+  <div class="footer-top">
+    <div class="footer-brand">
       <img src="https://raw.githubusercontent.com/badgerh001-ai/arthagroups.com/main/arthalogo.png" alt="ARTHA Interior Designers"/>
+      <p class="footer-tagline">Design Your Dreams</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/interiors_by_artha?igsh=MW16ZW95eG81Nm43OA==" target="_blank" class="social-btn gold-icon" title="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></a>
+        <a href="https://wa.me/919845840824" target="_blank" class="social-btn gold-icon" title="WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+        <a href="https://www.arthagroups.com" target="_blank" class="social-btn gold-icon" title="Website"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></a>
+      </div>
     </div>
-    <div class="footer-copy">
-      © 2025 ARTHA Interior Designers. All rights reserved.<br/>
-      <span style="margin-top:6px;display:block;">
-        Designed &amp; Developed by <a href="https://visionmatrixtech.com" target="_blank">VisionMatrix Tech</a>
-      </span>
+    <div class="footer-links-col">
+      <h4 class="footer-col-title">Quick Links</h4>
+      <ul>
+        <li><a href="#about"><span class="gold-icon link-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>About Us</a></li>
+        <li><a href="#services"><span class="gold-icon link-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>Services</a></li>
+        <li><a href="#portfolio"><span class="gold-icon link-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>Portfolio</a></li>
+        <li><a href="#plans"><span class="gold-icon link-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>Our Plans</a></li>
+        <li><a href="#process"><span class="gold-icon link-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>Our Process</a></li>
+        <li><a href="#contact"><span class="gold-icon link-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>Contact</a></li>
+      </ul>
     </div>
-    <div class="footer-links">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
+    <div class="footer-links-col">
+      <h4 class="footer-col-title">Services</h4>
+      <ul>
+        <li><a href="#services"><span class="gold-icon link-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>Residential Interiors</a></li>
+        <li><a href="#services"><span class="gold-icon link-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>Commercial Interiors</a></li>
+        <li><a href="#services"><span class="gold-icon link-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>Modular Kitchens</a></li>
+        <li><a href="#services"><span class="gold-icon link-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>Wardrobes & Storage</a></li>
+        <li><a href="#services"><span class="gold-icon link-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>Design Consultation</a></li>
+      </ul>
+    </div>
+    <div class="footer-links-col">
+      <h4 class="footer-col-title">Contact</h4>
+      <ul class="footer-contact-list">
+        <li><span class="gold-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.12 2.19 2 2 0 012.11 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></span><a href="tel:+919845840824">+91 98458 40824</a></li>
+        <li><span class="gold-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span><a href="mailto:contact@arthagroups.com">contact@arthagroups.com</a></li>
+        <li><span class="gold-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></span><a href="https://www.arthagroups.com">www.arthagroups.com</a></li>
+        <li><span class="gold-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Bangalore, Karnataka</span></li>
+      </ul>
     </div>
   </div>
+  <div class="footer-bottom">
+    <span>© 2025 ARTHA Interior Designers. All rights reserved.</span>
+    <span>Designed &amp; Developed by <a href="https://visionmatrixtech.com" target="_blank">VisionMatrix Tech</a></span>
+  </div>
 </footer>
+
+
 
 <script>
 // Smooth nav shrink on scroll
