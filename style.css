@@ -898,12 +898,21 @@
     display: flex !important;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    padding: 28px 20px;
+    justify-content: center;
+    gap: 12px;
+    padding: 28px 16px;
     background: var(--navy-mid);
     font-family: 'Montserrat', sans-serif;
     font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
     color: var(--white-dim); text-align: center;
+    border: 1px solid rgba(212,160,23,0.08);
+  }
+  .value-icon {
+    display: flex; align-items: center; justify-content: center;
+    width: 48px; height: 48px;
+    background: rgba(212,160,23,0.1);
+    border-radius: 50%;
+    border: 1px solid rgba(212,160,23,0.3);
   }
 
   /* Plan card base */  
@@ -1141,7 +1150,7 @@
   .social-btn:hover { border-color: var(--gold); background: rgba(212,160,23,0.08); }
   .footer-top {
     max-width: 1200px; margin: 0 auto;
-    display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+    display: grid; grid-template-columns: 1.5fr 1fr 1.3fr;
     gap: 48px; padding: 60px 60px 40px;
   }
   .footer-bottom {
@@ -1162,6 +1171,19 @@
   }
   .footer-contact-list a { color: rgba(250,246,238,0.5); }
   .footer-contact-list a:hover { color: var(--gold); }
+
+  .fcb-val {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px; 
+    color: rgba(250,246,238,0.75);
+    display: block; 
+    line-height: 1.3;
+  }
+  .fcb-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--gold); display: block; line-height: 1.2;
+  }
   @media (max-width: 960px) {
     /* NAV */
     nav { padding: 14px 24px !important; }
